@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="Inicio"
+        android:checkable="true"
+        android:checked="true" />
+
+    <item android:title="Situación operativa">
+        <menu>
+            <item
+                android:id="@+id/nav_ships_pos"
+                android:icon="@drawable/ic_directions_boat"
+                android:title="Posición de los buques"
+                android:checkable="true" />
+            <item
+                android:id="@+id/nav_announcements"
+                android:icon="@drawable/ic_notifications"
+                android:title="Anuncios"
+                android:checkable="true" />
+            <item
+                android:id="@+id/nav_movements"
+                android:icon="@drawable/ic_swap_horiz"
+                android:title="Movimientos previstos"
+                android:checkable="true" />
+            <item
+                android:id="@+id/nav_anchorage"
+                android:icon="@drawable/ic_anchor"
+                android:title="Buques en fondeadero"
+                android:checkable="true" />
+        </menu>
+    </item>
+
+    <item android:title="Otros">
+        <menu>
+            <item
+                android:id="@+id/nav_vts"
+                android:icon="@drawable/ic_location"
+                android:title="VTS"
+                android:checkable="true" />
+            <item
+                android:id="@+id/nav_depth"
+                android:icon="@drawable/ic_depth"
+                android:title="Profundidad de los sitios"
+                android:checkable="true" />
+            <item
+                android:id="@+id/nav_beacons"
+                android:icon="@drawable/ic_lightbulb"
+                android:title="Balizamiento"
+                android:checkable="true" />
+        </menu>
+    </item>
+</menu>

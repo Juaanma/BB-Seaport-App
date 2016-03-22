@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context="jms.delete.MainActivity"
+        android:id="@+id/scroll"
+        android:background="#dfdfdf"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:scrollbars="vertical">
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/ships_pos_cv"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="#52bad7"
+                app:cardUseCompatPadding="true"
+                android:paddingLeft="8dp"
+                android:paddingTop="16dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="16dp">
+
+                <RelativeLayout
+                    android:id="@+id/ships_pos_rl"
+                    style="@style/SelectableBackgroundTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="16dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="16dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ships_pos_icon"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/ic_directions_boat_white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ships_pos_text"
+                        android:textSize="20sp"
+                        android:text="Situación operativa del día"
+                        android:textColor="#ffffff"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/ships_pos_icon"
+                        android:layout_toEndOf="@+id/ships_pos_icon" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/beacons_cv"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="#f99911"
+                app:cardUseCompatPadding="true"
+                android:paddingLeft="8dp"
+                android:paddingTop="16dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="16dp">
+
+                <RelativeLayout
+                    android:id="@+id/beacons_rl"
+                    style="@style/SelectableBackgroundTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="16dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="16dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/beacons_icon"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/ic_lightbulb_white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/beacons_text"
+                        android:textSize="20sp"
+                        android:text="Condiciones de balizamiento"
+                        android:textColor="#ffffff"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/beacons_icon"
+                        android:layout_toEndOf="@+id/beacons_icon" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/depth_cv"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="#E7191B"
+                app:cardUseCompatPadding="true"
+                android:paddingLeft="8dp"
+                android:paddingTop="16dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="16dp">
+
+                <RelativeLayout
+                    android:id="@+id/depth_rl"
+                    style="@style/SelectableBackgroundTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="16dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="16dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/depth_icon"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/ic_depth_white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/depth_text"
+                        android:textSize="20sp"
+                        android:text="Profundidad de los sitios"
+                        android:textColor="#ffffff"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/depth_icon"
+                        android:layout_toEndOf="@+id/depth_icon" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/vts_cv"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="#852B99"
+                app:cardUseCompatPadding="true"
+                android:paddingLeft="8dp"
+                android:paddingTop="16dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="16dp">
+
+                <RelativeLayout
+                    android:id="@+id/vts_rl"
+                    style="@style/SelectableBackgroundTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="16dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="16dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/vts_icon"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/ic_location_white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/vts_text"
+                        android:textSize="20sp"
+                        android:text="Tráfico Marítimo Online"
+                        android:textColor="#ffffff"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/vts_icon"
+                        android:layout_toEndOf="@+id/vts_icon" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <ImageView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:src="@android:drawable/divider_horizontal_bright"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:scaleType="fitXY"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"/>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/news_cv1"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="#ffffff"
+                app:cardUseCompatPadding="true"
+                android:paddingLeft="8dp"
+                android:paddingTop="16dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="16dp">
+
+                <RelativeLayout
+                    android:id="@+id/news_rl1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/SelectableBackgroundTheme"
+                    android:layout_below="@+id/low_tide_cv"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="16dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="16dp"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:id="@+id/news_image1"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/news_title1"
+                        android:textSize="18sp"
+                        android:text="Título de la noticia"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/news_image1"
+                        android:layout_toEndOf="@+id/news_image1"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/darker_gray" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/news_cv2"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="#ffffff"
+                app:cardUseCompatPadding="true"
+                android:paddingLeft="8dp"
+                android:paddingTop="16dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="16dp">
+
+                <RelativeLayout
+                    android:id="@+id/news_rl2"
+                    style="@style/SelectableBackgroundTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/low_tide_cv"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="16dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="16dp"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:id="@+id/news_image2"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/news_title2"
+                        android:textSize="18sp"
+                        android:text="Título de la noticia"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/news_image2"
+                        android:layout_toEndOf="@+id/news_image2"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/darker_gray" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/news_cv3"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="#ffffff"
+                app:cardUseCompatPadding="true"
+                android:paddingLeft="8dp"
+                android:paddingTop="16dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="16dp"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/low_tide_cv"
+                    android:id="@+id/news_rl3"
+                    style="@style/SelectableBackgroundTheme"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="16dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="16dp"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:id="@+id/news_image3"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/news_title3"
+                        android:textSize="18sp"
+                        android:text="Título de la noticia"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/news_image3"
+                        android:layout_toEndOf="@+id/news_image3"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/darker_gray"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <ImageView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:src="@android:drawable/divider_horizontal_bright"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:scaleType="fitXY"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"/>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/high_tide_cv"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="#cbeaf3"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    style="@style/SelectableBackgroundTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:paddingBottom="16dp"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="16dp"
+                    android:paddingRight="8dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/high_tide_icon"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/ic_arrow_upward" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/high_tide_text"
+                        android:textSize="27sp"
+                        android:text="Pleamar"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/high_tide_icon"
+                        android:layout_toEndOf="@+id/high_tide_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/high_tide_hour"
+                        android:text="10:44 / 22:37"
+                        android:textSize="27sp"
+                        android:textStyle="bold"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/high_tide_text"
+                        android:layout_toEndOf="@+id/high_tide_text"
+                        android:layout_marginLeft="10dp"
+                        />
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/low_tide_cv"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="#cbeaf3"
+                app:cardUseCompatPadding="true"
+                android:paddingLeft="8dp"
+                android:paddingTop="16dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="16dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/high_tide_cv"
+                    style="@style/SelectableBackgroundTheme"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="16dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="16dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/low_tide_icon"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/ic_arrow_downward" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/low_tide_text"
+                        android:textSize="27sp"
+                        android:text="Bajamar"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/low_tide_icon"
+                        android:layout_toEndOf="@+id/low_tide_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/low_tide_hour"
+                        android:text="03:50 / 16:32"
+                        android:textSize="27sp"
+                        android:textStyle="bold"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/low_tide_text"
+                        android:layout_toEndOf="@+id/low_tide_text"
+                        android:layout_marginLeft="10dp"
+                        android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</android.support.v4.widget.SwipeRefreshLayout>
