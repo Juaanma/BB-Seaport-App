@@ -12,7 +12,7 @@
             <item
                 android:id="@+id/nav_ships_pos"
                 android:icon="@drawable/ic_directions_boat"
-                android:title="Posición de los buques"
+                android:title="Posición de buques"
                 android:checkable="true" />
             <item
                 android:id="@+id/nav_announcements"
@@ -42,7 +42,7 @@
             <item
                 android:id="@+id/nav_depth"
                 android:icon="@drawable/ic_depth"
-                android:title="Profundidad de los sitios"
+                android:title="Profundidad sitios"
                 android:checkable="true" />
             <item
                 android:id="@+id/nav_beacons"

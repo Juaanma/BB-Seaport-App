@@ -31,7 +31,8 @@ import au.com.bytecode.opencsv.CSVReader;
  */
 
 public class Helper {
-    public static final String serverURL = "http://ingraphica.com/clientes/puertomovil/jsreport/",
+    public static final String server1URL = "http://ingraphica.com/clientes/puertomovil/jsreport/",
+            server2URL = "http://puertobahiablanca.com/situacion_operativa/movil/",
             beaconsFileName = "balizamiento.csv", positionFileName = "posicion.csv",
             depthFileName = "profundidad.txt", newsServerURL = "http://puertobahiablanca.com/",
             newsFileName = "jsonnews.php";

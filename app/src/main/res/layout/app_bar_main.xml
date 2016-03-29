@@ -28,7 +28,7 @@
         <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/fragment_container"
             android:layout_width="match_parent"
-            android:layout_height="370dp"
+            android:layout_height="match_parent"
             android:layout_above="@+id/container"
             android:layout_alignParentTop="true" />
 
@@ -37,7 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_alignParentBottom="true"
-            android:background="#ff323232"
+            android:background="#3f3f3f"
             android:layout_alignParentEnd="true">
             <TextView
                 android:id="@+id/last_update_tv"

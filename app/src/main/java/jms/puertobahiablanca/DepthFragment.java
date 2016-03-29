@@ -32,7 +32,7 @@ public class DepthFragment extends Fragment {
         super.onResume();
         // Set title
         ((MainActivity) getActivity()).getSupportActionBar()
-                .setTitle("Profundidad de los sitios");
+                .setTitle("Profundidad sitios");
     }
 
     @Override

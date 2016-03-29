@@ -33,7 +33,7 @@ public class ShipsPositionsFragment extends Fragment {
         super.onResume();
         // Set title
         ((MainActivity) getActivity()).getSupportActionBar()
-                .setTitle("Posiciones de los buques");
+                .setTitle("Posición de buques");
     }
 
     @Override

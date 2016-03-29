@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.os.PowerManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -29,8 +28,8 @@ public class SplashScreenActivity extends AppCompatActivity {
             return;
 
         DownloadTask downloadTask = new DownloadTask(this);
-        downloadTask.execute(Helper.serverURL + Helper.positionFileName, Helper.serverURL +
-                        Helper.beaconsFileName, Helper.serverURL + Helper.depthFileName,
+        downloadTask.execute(Helper.server2URL + Helper.positionFileName, Helper.server1URL +
+                        Helper.beaconsFileName, Helper.server1URL + Helper.depthFileName,
                         Helper.newsServerURL + Helper.newsFileName);
     }
 
