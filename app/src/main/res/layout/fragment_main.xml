@@ -71,7 +71,7 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/ships_pos_text"
                         android:textSize="20sp"
-                        android:text="Posición de los buques"
+                        android:text="Situación operativa del día"
                         android:textColor="#ffffff"
                         android:layout_centerVertical="true"
                         android:layout_toRightOf="@+id/ships_pos_icon"
