@@ -1,4 +1,5 @@
 # BB Seaport App
+An Android app for the Bahía Blanca's seaport.
 
 ## Images
 <img alt="Loading screen" src="https://github.com/Juaanma/BB-Seaport-App/blob/master/img/loading_screen.png" width="300">
