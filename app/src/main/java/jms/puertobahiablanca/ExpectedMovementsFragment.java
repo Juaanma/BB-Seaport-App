@@ -36,7 +36,7 @@ public class ExpectedMovementsFragment extends Fragment {
         View layout = inflater.inflate(R.layout.fragment_expected_movements, container, false);
 
         // Set the Action Bar color corresponding to this fragment.
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF0D638F));
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF2F4682));
         ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayShowTitleEnabled(false);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayShowTitleEnabled(true);
 

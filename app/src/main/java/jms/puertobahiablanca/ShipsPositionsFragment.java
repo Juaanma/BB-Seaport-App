@@ -42,7 +42,7 @@ public class ShipsPositionsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_ships_positions, container, false);
 
         // Set the Action Bar color corresponding to this fragment.
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF52BAD7));
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF2F4682));
         ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayShowTitleEnabled(false);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayShowTitleEnabled(true);
 
