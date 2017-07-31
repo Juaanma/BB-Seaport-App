@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <body style="margin:0;padding:0;">
+        <script type="text/javascript">
+            width='100%';          //the width of the embedded map in pixels or percentage
+            height=document.documentElement.clientHeight+'px';         //the height of the embedded map in pixels or percentage
+            border=0;           //the width of border around the map. Zero means no border
+            notation=false;     //true or false to display or not the vessel icons and options at the left
+            shownames=true;    //true or false to dispaly ship names on the map
+            latitude= -38.9000;   //the latitude of the center of the map in decimal degrees
+            longitude=-62.1800;  //the longitude of the center of the map in decimal degrees
+            zoom=12;             //the zoom level of the map. Use values between 2 and 17
+            maptype=1;          //use 0 for Normal map, 1 for Satellite, 2 for Hybrid, 3 for Terrain
+            trackvessel=0;      //the MMSI of the vessel to track, if within the range of the system
+            fleet='';           //the registered email address of a user-defined fleet to display
+            remember=false;     //true or false to remember or not the last position of the map
+        </script>
+        <div>
+            <script type="text/javascript" src="http://www.marinetraffic.com/ais/embed.js"></script>
+        </div>
+    </body>
+</html>
