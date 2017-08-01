@@ -1,4 +1,4 @@
-package jms.puertobahiablanca;
+package jms.cgpbb;
 
 import android.content.Intent;
 import android.os.Bundle;

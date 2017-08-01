@@ -1,4 +1,4 @@
-package jms.puertobahiablanca;
+package jms.cgpbb;
 
 /*
  * Copyright (C) 2014 The Android Open Source Project
