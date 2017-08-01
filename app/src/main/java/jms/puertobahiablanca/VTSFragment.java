@@ -33,7 +33,7 @@ public class VTSFragment extends Fragment {
         View layout = inflater.inflate(R.layout.fragment_vts, container, false);
 
         // Set the Action Bar color corresponding to this fragment.
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF2F4682));
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF852B99));
         ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayShowTitleEnabled(false);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayShowTitleEnabled(true);
 
