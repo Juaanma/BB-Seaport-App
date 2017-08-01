@@ -1,0 +1,28 @@
+Title:
+--------------------------------------------------------------------------------------------------------------
+
+Consorcio de Gestión del Puerto de Bahía Blanca
+
+Brief description:
+--------------------------------------------------------------------------------------------------------------
+
+Servicios ofrecidos del CGPBB (Consorcio de Gestión del Puerto de Bahía Blanca)
+
+Complete description:
+--------------------------------------------------------------------------------------------------------------
+
+- Situación Operativa del Día: Existencia de buques en puerto, movimientos y previsiones a corto plazo.
+
+- Posición de Buques: Detalle de buques amarrados en puerto por terminal o muelle operativo.
+
+- Anuncios: Detalle de buques cuyo arribo a puerto está previsto para los próximos días.
+
+- Movimientos Previstos: Entradas, salidas o cambios de sitio de buques que se producirán en el día.
+
+- Buques en Fondeadero: Detalle de buques fondeados a la espera de muelle o por otros motivos.
+
+- Condiciones de Balizamiento: Estado de funcionamiento de boyas, faros y balizas que componen el sistema de señalización marítima del canal de acceso y muelles.
+
+- Profundidad en los Sitios: Información sobre la profundidad operativa existente en los muelles y sitios del puerto.
+
+- Tráfico Marítimo on-line: Información en tiempo real sobre la existencia y movimiento de buques en puerto y canal de acceso.
