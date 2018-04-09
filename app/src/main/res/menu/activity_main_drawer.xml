@@ -35,6 +35,11 @@
     <item android:title="Otros">
         <menu>
             <item
+                android:id="@+id/nav_billing"
+                android:icon="@drawable/ic_attach_money"
+                android:title="Tarifario portuario"
+                android:checkable="true" />
+            <item
                 android:id="@+id/nav_vts"
                 android:icon="@drawable/ic_location"
                 android:title="VTS"
