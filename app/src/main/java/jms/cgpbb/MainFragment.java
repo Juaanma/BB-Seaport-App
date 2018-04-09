@@ -78,7 +78,8 @@ public class MainFragment extends Fragment {
         RelativeLayout shipsPosRl = (RelativeLayout) layout.findViewById(R.id.ships_pos_rl),
                 beaconsRl = (RelativeLayout) layout.findViewById(R.id.beacons_rl),
                 depthRl = (RelativeLayout) layout.findViewById(R.id.depth_rl),
-                vtsRl = (RelativeLayout) layout.findViewById(R.id.vts_rl);
+                vtsRl = (RelativeLayout) layout.findViewById(R.id.vts_rl),
+                billingRl = (RelativeLayout) layout.findViewById(R.id.billing_rl);
         shipsPosRl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -101,6 +102,19 @@ public class MainFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 onChangeFragmentButtonPressed.OnChangeFragmentButtonPressed("vts");
+            }
+        });
+        billingRl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Get BB Seaport's Billing URL-page from BB Seaport's page.
+                // Stored on strings.xml
+                String url = getString(R.string.billing_url);
+
+                // Show URL on view...
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(url));
+                startActivity(intent);
             }
         });
 

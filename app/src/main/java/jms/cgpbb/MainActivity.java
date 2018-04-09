@@ -1,6 +1,7 @@
 package jms.cgpbb;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -229,6 +230,16 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_anchorage:
                 fragment = new ShipsInAnchorageFragment();
                 break;
+            case R.id.nav_billing:
+                // Get BB Seaport's Billing URL-page from BB Seaport's page.
+                // Stored on strings.xml
+                String url = getString(R.string.billing_url);
+
+                // Show URL on view...
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(url));
+                startActivity(intent);
+                return true;
         }
 
         Helper.fragmentTransaction(getSupportFragmentManager(), fragment);
