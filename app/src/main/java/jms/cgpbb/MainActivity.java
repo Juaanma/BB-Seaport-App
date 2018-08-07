@@ -44,7 +44,10 @@ public class MainActivity extends AppCompatActivity
         // Create a Snackbar of indefinite length.
         TextView lastUpdateTv = (TextView) findViewById(R.id.last_update_tv);
         String last_update_date = Helper.positionCSV.get(1)[1];
-        lastUpdateTv.setText("Última actualización " + last_update_date + ".");
+
+        // Replace char "-" from date to char "/" to be more user-friendly.
+        last_update_date = last_update_date.replace("-", "/");
+        lastUpdateTv.setText("Última actualización: " + last_update_date + ".");
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -112,16 +115,16 @@ public class MainActivity extends AppCompatActivity
 
         switch (nextFragment) {
             case "beacons":
-                menuItem = navigationView.getMenu().getItem(2).getSubMenu().getItem(2);
+                menuItem = navigationView.getMenu().getItem(2).getSubMenu().getItem(3);
                 break;
             case "shipspos":
                 menuItem = navigationView.getMenu().getItem(1).getSubMenu().getItem(0);
                 break;
             case "depth":
-                menuItem = navigationView.getMenu().getItem(2).getSubMenu().getItem(1);
+                menuItem = navigationView.getMenu().getItem(2).getSubMenu().getItem(2);
                 break;
             case "vts":
-                menuItem = navigationView.getMenu().getItem(2).getSubMenu().getItem(0);
+                menuItem = navigationView.getMenu().getItem(2).getSubMenu().getItem(1);
                 break;
         }
         onNavigationItemSelected(menuItem);

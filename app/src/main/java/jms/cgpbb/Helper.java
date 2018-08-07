@@ -25,10 +25,10 @@ import au.com.bytecode.opencsv.CSVReader;
  */
 
 public class Helper {
-    public static final String server1URL = "http://ingraphica.com/clientes/puertomovil/jsreport/",
-            server2URL = "http://puertobahiablanca.com/situacion_operativa/movil/",
+    public static final String server1URL = "https://ingraphica.com/clientes/puertomovil/jsreport/",
+            server2URL = "https://puertobahiablanca.com/situacion_operativa/movil/",
             beaconsFileName = "balizamiento.csv", positionFileName = "posicion.csv",
-            depthFileName = "profundidad.txt", newsServerURL = "http://puertobahiablanca.com/",
+            depthFileName = "profundidad.txt", newsServerURL = "https://puertobahiablanca.com/",
             newsFileName = "jsonnews.php";
 
     private static final char SEPARATOR = ';';
