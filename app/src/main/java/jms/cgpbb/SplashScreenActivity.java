@@ -28,9 +28,9 @@ public class SplashScreenActivity extends AppCompatActivity {
             return;
 
         DownloadTask downloadTask = new DownloadTask(this);
-        downloadTask.execute(Helper.server2URL + Helper.positionFileName, Helper.server1URL +
+        downloadTask.execute(Helper.server1URL + Helper.positionFileName, Helper.server1URL +
                         Helper.beaconsFileName, Helper.server1URL + Helper.depthFileName,
-                        Helper.newsServerURL + Helper.newsFileName);
+                        Helper.server1URL + Helper.newsFileName);
     }
 
     private class DownloadTask extends AsyncTask<String, Integer, String> {
@@ -101,8 +101,7 @@ public class SplashScreenActivity extends AppCompatActivity {
                         output.write(data, 0, count);
                     }
                 } catch (Exception e) {
-                    return "Ocurrió un problema durante la descarga. Asegúrate " +
-                            " de estar conectado a Internet e intenta nuevamente.";
+                    return "Ocurrió un problema durante la descarga. Asegúrate de estar conectado a Internet e intenta nuevamente.";
                     // return e.toString();
                 } finally {
                     try {

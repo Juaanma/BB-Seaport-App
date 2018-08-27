@@ -1,6 +1,5 @@
 package jms.cgpbb;
 
-
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
