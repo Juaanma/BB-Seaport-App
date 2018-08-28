@@ -53,6 +53,10 @@ public class Helper {
             csvReader.close();
 
             // Read the depths CSV file.
+
+            // First empty depth's variable to avoid collecting old data
+            depthTXT = new ArrayList<>();
+
             FileInputStream is;
             is = new FileInputStream(depthFile);
             BufferedReader bufReader = new BufferedReader(new InputStreamReader(is));
