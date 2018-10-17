@@ -11,7 +11,7 @@
         android:name="jms.puertobahiablanca.BeaconsFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layoutManager="LinearLayoutManager"
-        tools:context="jms.puertobahiablanca.BeaconsFragment"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        tools:context="jms.cgpbb.BeaconsFragment"
         tools:listitem="@layout/general_list_item" />
 </android.support.v4.widget.SwipeRefreshLayout>
